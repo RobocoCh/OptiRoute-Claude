@@ -17,7 +17,8 @@ data class DepotEntity(
     val operationalHours: String,
     val adminId: String,
     val isActive: Boolean,
-    val createdAt: Long
+    val createdAt: Long,
+    val updatedAt: Long
 ) {
     fun toDomainModel(): Depot {
         return Depot(
@@ -28,7 +29,8 @@ data class DepotEntity(
             operationalHours = operationalHours,
             adminId = adminId,
             isActive = isActive,
-            createdAt = createdAt
+            createdAt = createdAt,
+            updatedAt = updatedAt
         )
     }
 
@@ -44,7 +46,8 @@ data class DepotEntity(
                 operationalHours = depot.operationalHours,
                 adminId = depot.adminId,
                 isActive = depot.isActive,
-                createdAt = depot.createdAt
+                createdAt = depot.createdAt,
+                updatedAt = depot.updatedAt
             )
         }
     }

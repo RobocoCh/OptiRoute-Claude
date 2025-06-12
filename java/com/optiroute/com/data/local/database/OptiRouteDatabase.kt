@@ -23,7 +23,10 @@ import com.optiroute.com.data.local.entities.*
     version = 3,
     exportSchema = false
 )
-@TypeConverters(RouteConverters::class, DeliveryTrackingConverters::class)
+@TypeConverters(
+    RouteConverters::class,
+    DeliveryTrackingConverters::class
+)
 abstract class OptiRouteDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao

@@ -30,8 +30,4 @@ interface DepotDao {
 
     @Query("DELETE FROM depots WHERE id = :depotId")
     suspend fun deleteDepotById(depotId: String)
-
-    fun getAllDepots(): Flow<List<DepotEntity>>
-    suspend fun getDepotsCount(): Int
-    suspend fun getActiveDepotsCount(): Int
 }
